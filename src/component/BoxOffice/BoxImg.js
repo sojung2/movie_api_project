@@ -7,7 +7,7 @@ const BoxImg = ({ movieNm, openDt, rank }) => {
   const getPoster = async () => {
     const json = await (
       await fetch(
-        `http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp?collection=kmdb_new2&detail=Y&title=${movieNm}&releaseDts=${openDt}&ServiceKey=G3O5TIC12LVI911FTE84`
+        `http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp?collection=kmdb_new2&detail=Y&title=${movieNm}&releaseDts=${openDt}&ServiceKey={}`
       )
     ).json();
     setPoster(json.Data[0].Result[0].posters.split("|")[0]);

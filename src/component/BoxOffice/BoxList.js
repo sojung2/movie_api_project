@@ -25,7 +25,7 @@ const BoxList = () => {
     const getMovies = async () => {
       const json = await (
         await fetch(
-          `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=b03a97f2058b7d156b291ed23abcd79b&targetDt=20230917`
+          `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key={}&targetDt=20230917`
         )
       ).json();
 
